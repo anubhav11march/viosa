@@ -19,8 +19,11 @@ const App = () => {
   return (
     <HashRouter>
         <Routes>
+        <Route path="*" element={<Landing />} />
+        <Route path='/home/*' element={<Landing/>}/>
           <Route path='/profile/*' element={<Profile/>}/>
-          <Route path='/home/*' element={<Landing/>}/>
+          <Route path='/course/details/:id' element={<CoursePage/>}/>
+          
         </Routes>
     </HashRouter>
   );
